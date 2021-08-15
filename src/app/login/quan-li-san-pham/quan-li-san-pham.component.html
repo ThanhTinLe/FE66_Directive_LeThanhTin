@@ -1,0 +1,47 @@
+<div class="container mt-3">
+    <div class="them__SP border">
+        <div class="form-group">
+            <h3 class="form-control bg-dark text-white">Quản lí danh mục sản phẩm</h3>
+          </div>
+       <div class="container">
+            <div class="form-group">
+              <label for="">Mã SP</label>
+              <input type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="" #newMaSP>
+            </div>
+            <div class="form-group">
+                <label for="">Tên SP</label>
+                <input type="text"
+                  class="form-control" name="" id="" aria-describedby="helpId" placeholder="" #newTenSP>
+              </div>
+              <div class="form-group">
+                <label for="">Giá</label>
+                <input type="text"
+                  class="form-control" name="" id="" aria-describedby="helpId" placeholder="" #newGiaSP>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-success" (click)="themSP(newMaSP.value,newTenSP.value,newGiaSP.value)">Thêm sản phẩm</button>
+              </div>
+       </div>
+    </div>
+    <div class="DS__SP mt-3">
+        <table class="table">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã SP</th>
+                    <th>Tên SP</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of arrProduct; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.maSP}}</td>
+                    <td>{{item.tenSP}}</td>
+                    <td>{{item.gia}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
